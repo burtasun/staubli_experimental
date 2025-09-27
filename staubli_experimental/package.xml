@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package format="2">
+<package format="3">
   <name>staubli_experimental</name>
   <version>0.1.0</version>
   <description>Experimental packages for Staubli manipulators within ROS-Industrial (metapackage).</description>
@@ -11,14 +11,13 @@
   <url type="bugtracker">https://github.com/ros-industrial/staubli_experimental/issues</url>
   <url type="repository">https://github.com/ros-industrial/staubli_experimental</url>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
   <exec_depend>staubli_rx160_gazebo</exec_depend>
   <exec_depend>staubli_tx90_gazebo</exec_depend>
   <exec_depend>staubli_tx90_support</exec_depend>
 
   <export>
-    <metapackage/>
-    <architecture_independent/>
+    <build_type>ament_cmake</build_type>
   </export>
 </package>
