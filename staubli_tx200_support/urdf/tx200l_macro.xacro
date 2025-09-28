@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:include filename="$(find staubli_resources)/urdf/common_materials.xacro"/>
+
+  <xacro:macro name="staubli_tx200l" params="prefix">
+    <!-- TODO: Update meshes and inertial values for TX200L -->
+    <!-- links: main serial chain -->
+    <link name="${prefix}base_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://staubli_tx200_support/meshes/tx200/visual/base_link.stl"/>
+        </geometry>
+        <xacro:material_staubli_ral_melon_yellow />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://staubli_tx200_support/meshes/tx200/collision/base_link.stl"/>
+        </geometry>
+      </collision>
+      <inertial>
+          <mass value="TODO"/>
+          <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+          <inertia ixx="TODO" ixy="0.0" ixz="0.0"
+                                    iyy="TODO" iyz="0.0"
+                                                     izz="TODO"/>
+      </inertial>
+    </link>
+    <!-- Repeat for other links, update mesh paths and inertial values -->
+  </xacro:macro>
+</robot>
