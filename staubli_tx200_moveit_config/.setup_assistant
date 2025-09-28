@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: staubli_tx200_support
+    relative_path: urdf/tx200.urdf
+  srdf:
+    relative_path: config/staubli_tx200.srdf
+  package_settings:
+    author_name: burtasun
+    author_email: benaturtasun@gmail.com
+    generated_timestamp: 1759023653
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
